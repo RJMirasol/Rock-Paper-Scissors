@@ -8,51 +8,11 @@
 
 //Pseudocode
 //Get the computers selection using a function
-function getComputerSelection(pick) {
-  // --Use math.random to get random numbers and make sure to convert to whole number and save it as a variable
-  const randomNumber = Math.floor(Math.random() * 3) + 1;
-
-  // --Use conditional if statement for rock = 1, paper = 2, scissors = 3
-  if (randomNumber === 1) {
-    pick = 'rock';
-  } else if (randomNumber === 2) {
-    pick = 'paper';
-  } else if (randomNumber === 3) {
-    pick = 'scissors';
-  }
-  // --Return the computer selection
-  return pick;
-}
+// --Use math.random to get random numbers and make sure to convert to whole number and save it as a variable
+// --Use conditional if statement for rock = 1, paper = 2, scissors = 3
+// --Return the computer selection
 
 //Get the users selection using prompt --Save the users input into the a variable
-const userSelection = prompt(
-  'Whats your selection\nRock,Paper,Scissors: '
-).toLowerCase();
 
-//Create sa function to Compare computer's and user's input using a conditional
-function playGame() {
-  const compSelect = getComputerSelection();
-
-  //Output the winner via console log
-  if (
-    (compSelect === 'paper' && userSelection === 'rock') ||
-    (compSelect === 'scissors' && userSelection === 'paper') ||
-    (compSelect === 'rock' && userSelection === 'scissors')
-  ) {
-    console.log('Computer wins!');
-  } else if (
-    (compSelect === 'scissors' && userSelection === 'rock') ||
-    (compSelect === 'rock' && userSelection === 'paper') ||
-    (compSelect === 'paper' && userSelection === 'scissors')
-  ) {
-    console.log('User Wins!');
-  } else if (
-    (compSelect === 'scissors' && userSelection === 'scissors') ||
-    (compSelect === 'rock' && userSelection === 'rock') ||
-    (compSelect === 'paper' && userSelection === 'paper')
-  ) {
-    console.log('It is a tie');
-  }
-}
-
-playGame();
+//Create a function to Compare computer's and user's input using conditional if statement
+//Output the results via console log
